@@ -1,4 +1,4 @@
-ifeq ($(call my-dir),$(call project-path-for,bt-vendor))
+ifneq ($(filter msm8937,$(TARGET_BOARD_PLATFORM)),)
 
 ifeq ($(call is-vendor-board-platform,QCOM),true)
 include $(call all-named-subdir-makefiles,libbt-vendor)
